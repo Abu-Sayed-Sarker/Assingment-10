@@ -78,9 +78,9 @@ const Navbar = () => {
                             <NavLink to={'/allvisa'}><li className="hover:bg-pink-600 font-semibold uppercase rounded-full"><a>All visas</a></li></NavLink>
                             <NavLink to={'/contactUs'}><li className="hover:bg-pink-600 font-semibold uppercase rounded-full"><a>Contact US</a></li></NavLink>
                             <NavLink to={'/aboutUs'}><li className="hover:bg-pink-600 font-semibold uppercase rounded-full"><a>About US</a></li></NavLink>
-                            <NavLink to={'/addvisa'}><li className="hover:bg-pink-600 font-semibold uppercase rounded-full"><a>Add Visa</a></li></NavLink>
-                            <NavLink to={user?.email ? `/addedvisa/${user.email}` : '/login'}><li className="hover:bg-pink-600 font-semibold uppercase rounded-full"><a>My visas</a></li></NavLink>
-                            <NavLink to={user?.email ? `/visaapplications/${user.email}` : '/login'}><li className="hover:bg-pink-600 font-semibold uppercase rounded-full"><a>My applications</a></li></NavLink>
+                            {user && <NavLink to={'/addvisa'}><li className="hover:bg-pink-600 font-semibold uppercase rounded-full"><a>Add Visa</a></li></NavLink>}
+                            {user && <NavLink to={user?.email ? `/addedvisa/${user.email}` : '/login'}><li className="hover:bg-pink-600 font-semibold uppercase rounded-full"><a>My visas</a></li></NavLink>}
+                            {user && <NavLink to={user?.email ? `/visaapplications/${user.email}` : '/login'}><li className="hover:bg-pink-600 font-semibold uppercase rounded-full"><a>My applications</a></li></NavLink>}
                         </ul>
                     </div>
                     <a className="font-bold text-2xl">E-<span className="text-pink-600">VISA</span></a>

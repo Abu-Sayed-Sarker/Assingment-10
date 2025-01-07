@@ -119,7 +119,7 @@ const Ditails = () => {
                                         <form onSubmit={submitAddVisa} method="dialog">
                                             <div className="flex flex-col gap-3">
                                                 <p className="text-left">Enter email</p>
-                                                <input name="Email" type="text" value={`${user.email}`} required placeholder="Type here" className="input input-bordered w-full" />
+                                                <input name="Email" type="text" value={`${user?.email}`} required placeholder="Type here" className="input input-bordered w-full" />
                                                 <div className="flex gap-3">
                                                     <input name="firstName" type="text" required placeholder="First Name" className="input input-bordered w-ful" />
                                                     <input name="LastName" type="text" required placeholder="Last Name" className="input input-bordered w-full" />
